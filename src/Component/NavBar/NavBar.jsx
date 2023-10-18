@@ -6,6 +6,7 @@ const NavBar = () => {
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/about'>Add product</NavLink></li>
         <li><NavLink to='/team'>My Cart</NavLink></li>
+        
     </>
 
     return (
@@ -35,7 +36,6 @@ const NavBar = () => {
             <Link to='/login'><button className='bg-black px-4 py-2 rounded-lg text-white'>Login</button></Link> 
             </div>
                
-          
         </div>
     );
 };
