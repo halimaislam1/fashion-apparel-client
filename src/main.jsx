@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+// import App from './App.jsx'
 import './index.css'
 
 import {
@@ -9,6 +9,9 @@ import {
 } from "react-router-dom";
 import Root from './Component/LayOut/Root.jsx';
 import ErrorPage from './Component/ErrorPage/ErrorPage.jsx';
+import AddProduct from './Component/AddProduct/AddProduct.jsx';
+import Home from './Component/Home/Home.jsx';
+import MyCart from './Component/MyCart/MyCart';
 
 
 const router = createBrowserRouter([
@@ -17,10 +20,18 @@ const router = createBrowserRouter([
     element: <Root></Root>,
     errorElement: <ErrorPage></ErrorPage>,
     children: [
-      // {
-      //   path: '/',
-      //   element: <Home></Home>
-      // },
+      {
+        path: '/',
+        element: <Home></Home>
+      },
+      {
+        path: '/addproduct',
+        element: <AddProduct></AddProduct>
+      },
+      {
+        path: '/mycart',
+        element: <MyCart></MyCart>
+      },
     ]
   },
   

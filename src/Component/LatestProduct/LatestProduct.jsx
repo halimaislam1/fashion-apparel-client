@@ -1,9 +1,10 @@
 import React from "react";
+import Work from "../Work/Work";
 
 const LatestProduct = () => {
   return (
-    <div>
-      <div>
+    <div > 
+      <div >
        <p className=" mt-20 mb-3 text-center text-sm text-gray-500 font-medium">SEE OUR COLLECTION</p>
       <h1 className="text-4xl text-center mb-4 font-semibold ">LATEST PRODUCTS</h1>
       <p className="text-center text-gray-400">There is a wide variation of collection,among which the following are available in latest collection.</p>
@@ -112,6 +113,7 @@ const LatestProduct = () => {
           </div>
         </div>
       </div>
+      <Work></Work>
     </div>
   );
 };
