@@ -1,9 +1,8 @@
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-// import { AuthContext } from "../../Provider/AuthProvider";
-import swal from "sweetalert2";
 import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Login = () => {
   const { login, loginWithGoogle } = useContext(AuthContext);
@@ -20,20 +19,37 @@ const Login = () => {
     console.log(email, password);
 
     if (password.length < 6) {
-      swal("Password should be at least 6 charecters");
+    //   swal("Password should be at least 6 charecters");
+      Swal.fire({
+        title: 'Success!',
+        text: 'Password should be at least 6 charecters',
+        icon: 'success',
+        confirmButtonText: 'Cool'
+      })
       return;
     } else if (!/[A-Z]/.test(password)) {
-      swal("Password should be at least one uppercase");
+    Swal.fire({
+        title: 'Success!',
+        text: 'Password should be at least one uppercase',
+        icon: 'success',
+        confirmButtonText: 'Cool'
+      })
       return;
     } else if (!/[#?!@$%^&*-]/.test(password)) {
-      swal("Password should be at least one special charecter");
+    Swal.fire({
+        title: 'Success!',
+        text: 'Password should be at least one special character',
+        icon: 'success',
+        confirmButtonText: 'Cool'
+      })
+    
       return;
     }
 
     login(email, password)
       .then((result) => {
         console.log(result.user);
-        swal({
+        Swal.fire({
           text: "login successful",
           timer: 1000,
         });
@@ -43,7 +59,7 @@ const Login = () => {
 
       .catch((error) => {
         console.error(error);
-        swal({
+        Swal.fire({
           text: "Invalid mail or password,please try again",
           timer: 4000,
         });
