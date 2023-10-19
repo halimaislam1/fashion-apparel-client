@@ -18,9 +18,13 @@ const NavBar = () => {
     }
 
     const navLink = <>
-        <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/addproduct'>Add product</NavLink></li>
-        <li><NavLink to='/myCart'>My Cart</NavLink></li>
+        <li className='font-bold'>
+        <NavLink to='/'>Home</NavLink></li>
+        <li className='font-bold '>
+        <NavLink to='/addproduct'>Add product</NavLink></li>
+        <li className='font-bold'>
+        <NavLink to='/myCart'>My Cart</NavLink>
+        </li>
 
     </>
 
@@ -36,8 +40,8 @@ const NavBar = () => {
                     </ul>
                 </div>
                 
-                <img className=' w-28 md:w-24  ' src="https://i.imgur.com/tPjfMBs.png" alt="" />
-                <img className=' w-28 md:w-20  ' src="https://i.imgur.com/Geyd14x.png" alt="" />
+                <img className=' w-14 md:w-24 ' src="https://i.imgur.com/tPjfMBs.png" alt="" />
+                <img className='  md:w-14   hidden md:block' src="https://i.imgur.com/Geyd14x.png" alt="" />
                 
                    
             </div>
@@ -53,7 +57,7 @@ const NavBar = () => {
                     <div className='flex items-center justify-center gap-3 '>
                         <p>{user.displayName}</p>
                         <img className='w-14 h-14 rounded-full' src={user.photoURL} alt="" />
-                        <button onClick={handleSignOut} className="btn bg-black text-white">sign Out</button>
+                        <button onClick={handleSignOut} className="btn bg-black text-white px-1 md:px-2 ">sign Out</button>
                     </div>
                     : 
                     <Link to='/login'>
@@ -62,9 +66,7 @@ const NavBar = () => {
                 }
             </div>
             
-            {/* <div className='navbar-end '>
-            <Link to='/login'><button className='bg-black px-4 py-2 rounded-lg text-white'>Login</button></Link> 
-            </div> */}
+           
                
         </div>
     );

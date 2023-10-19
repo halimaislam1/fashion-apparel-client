@@ -1,5 +1,6 @@
 import React from "react";
 import LatestProduct from "../LatestProduct/LatestProduct";
+import Brand from "../Brand/Brand";
 // import Home from "../Home/Home";
 
 const Banner = () => {
@@ -20,6 +21,7 @@ const Banner = () => {
           </div>
         </div>
       </div>
+      <Brand></Brand>
       <LatestProduct ></LatestProduct>
     </div>
     
