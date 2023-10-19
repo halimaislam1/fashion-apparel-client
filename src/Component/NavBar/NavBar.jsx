@@ -1,6 +1,21 @@
 import { Link, NavLink } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from '../Provider/AuthProvider';
+
 
 const NavBar = () => {
+
+    const {user,logOut} = useContext(AuthContext)
+
+    const handleSignOut = () =>{
+        logOut()
+          .then(result => {
+            console.log(result.user);
+          })
+          .catch(error =>{
+            console.error(error)
+          })
+    }
 
     const navLink = <>
         <li><NavLink to='/'>Home</NavLink></li>
@@ -21,8 +36,8 @@ const NavBar = () => {
                     </ul>
                 </div>
                 
-                <img className=' w-28 md:w-40  ' src="https://i.imgur.com/tPjfMBs.png" alt="" />
-                <img className=' w-28 md:w-28  ' src="https://i.imgur.com/Geyd14x.png" alt="" />
+                <img className=' w-28 md:w-24  ' src="https://i.imgur.com/tPjfMBs.png" alt="" />
+                <img className=' w-28 md:w-20  ' src="https://i.imgur.com/Geyd14x.png" alt="" />
                 
                    
             </div>
@@ -31,10 +46,25 @@ const NavBar = () => {
                     {navLink}
                 </ul>
             </div>
-            
-            <div className='navbar-end '>
-            <Link to='/login'><button className='bg-black px-4 py-2 rounded-lg text-white'>Login</button></Link> 
+            <div className="navbar-end flex gap-3">
+                
+                {
+                    user ? 
+                    <div className='flex items-center justify-center gap-3 '>
+                        <p>{user.displayName}</p>
+                        <img className='w-14 h-14 rounded-full' src={user.photoURL} alt="" />
+                        <button onClick={handleSignOut} className="btn bg-black text-white">sign Out</button>
+                    </div>
+                    : 
+                    <Link to='/login'>
+                    <button className="btn bg-black text-white">Login</button>
+                  </Link>
+                }
             </div>
+            
+            {/* <div className='navbar-end '>
+            <Link to='/login'><button className='bg-black px-4 py-2 rounded-lg text-white'>Login</button></Link> 
+            </div> */}
                
         </div>
     );
