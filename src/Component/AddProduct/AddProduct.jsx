@@ -1,3 +1,5 @@
+import Swal from "sweetalert2";
+
 const AddProduct = () => {
   const handleAddProduct = (e) => {
     e.preventDefault();
@@ -5,7 +7,7 @@ const AddProduct = () => {
 
     const name = form.name.value;
     const type = form.type.value;
-    const brandname = form.brandname.value;
+    const brandName = form.brandName.value;
     const price = form.price.value;
     const rating = form.rating.value;
     const description = form.description.value;
@@ -16,10 +18,32 @@ const AddProduct = () => {
       description,
       price,
       rating,
-      brandname,
+      brandName,
       photo,
     };
     console.log(newProduct);
+
+    //send data to the server
+    fetch('http://localhost:5000/fashion',{
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newProduct)
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log(data);
+        if(data.insertedId){
+            Swal.fire({
+                title: 'Success!',
+                text: 'Product added successfully',
+                icon: 'success',
+                confirmButtonText: 'Cool'
+              })
+        }
+        
+    })
   };
 
   return (
@@ -49,14 +73,14 @@ const AddProduct = () => {
               <label className="label">
                 <span className="label-text">Brand Name</span>
               </label>
-              <label className="input-group">
-                <input
-                  type="text"
-                  name="brandname"
-                  placeholder="Brand Name"
-                  className="input input-bordered w-full"
-                />
-              </label>
+              <select className="select select-bordered " name='brandName'>
+                      <option value="Nike">Nike</option>
+                      <option value="Gucchi">Gucchi</option>
+                      <option value="zara">zara</option>
+                      <option value="Adidas">Adidas</option>
+                      <option value="H&M">H&M</option>
+                      <option value="Levi's">Levis</option>
+                  </select>
             </div>
           </div>
           {/* Type*/}
@@ -66,9 +90,9 @@ const AddProduct = () => {
                 <span className="label-text">Type</span>
               </label>
                   <select className="select select-bordered " name='type'>
-                      <option value="Women">Women</option>
-                      <option value="Man">Man</option>
-                      <option value="Baby">Baby</option>
+                      <option value="Women">Women collection</option>
+                      <option value="Man">Man collection</option>
+                      <option value="Baby">Baby collection</option>
                   </select>
             </div>
             {/* Price */}

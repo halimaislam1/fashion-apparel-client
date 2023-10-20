@@ -1,8 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-// import App from './App.jsx'
 import './index.css'
-
 import {
   createBrowserRouter,
   RouterProvider,
@@ -16,6 +14,12 @@ import Login from './Component/Login/Login';
 import Register from './Component/Register/Register';
 import AuthProvider from './Component/Provider/AuthProvider';
 import PrivateRoute from './PrivateRoute';
+import Nike from './Component/Nike/Nike';
+import Gucci from './Component/Gucci/Gucci';
+import Zara from './Component/Zara/Zara';
+import HM from './Component/H & M/HM';
+import Lavis from './Component/Lavis/Lavis';
+import Adidas from './Component/Adidas/adidas';
 
 
 const router = createBrowserRouter([
@@ -44,6 +48,38 @@ const router = createBrowserRouter([
         path: '/register',
         element: <Register></Register>
       },
+      {
+        path: '/nike',
+        element: <Nike></Nike>,
+         loader :() => fetch('http://localhost:5000/fashion')
+      },
+      {
+        path: '/gucci',
+        element: <Gucci></Gucci>,
+         loader :() => fetch('http://localhost:5000/fashion')
+      },
+      {
+        path: '/zara',
+        element: <Zara></Zara>,
+         loader :() => fetch('http://localhost:5000/fashion')
+      },
+      {
+        path:'/adidas',
+        element: <Adidas></Adidas>,
+        loader :() => fetch('http://localhost:5000/fashion')
+      },
+      {
+        path: '/h&m',
+        element: <HM></HM>,
+        loader :() => fetch('http://localhost:5000/fashion')
+      },
+      {
+        path:'/levis',
+        element: <Lavis></Lavis>,
+        loader :() => fetch('http://localhost:5000/fashion')
+
+      }
+      
     ]
   },
   
