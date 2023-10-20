@@ -24,7 +24,7 @@ const Brand = () => {
          <img src="https://i.imgur.com/nxmzHzj.jpg" alt="brand" />
        </figure>
        <div className="card-body ">
-         <h2 className="font-semibold text-center text-xl">Gucchi!</h2>
+         <h2 className="font-semibold text-center text-xl">Gucci!</h2>
        </div>
      </div>
      </Link>

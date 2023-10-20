@@ -8,7 +8,6 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 
-
 const Nike = () => {
   const allBrandProduct = useLoaderData();
   const Nike = allBrandProduct.filter(
