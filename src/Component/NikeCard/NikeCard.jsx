@@ -29,7 +29,4 @@ const NikeCard = ({ product }) => {
     </div>
   );
 };
-// https://i.imgur.com/TOskuI3.png
-//https://i.imgur.com/qC1Ojki.png
-
 export default NikeCard;
