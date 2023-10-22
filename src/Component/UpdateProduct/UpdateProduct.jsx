@@ -4,6 +4,8 @@ import Swal from "sweetalert2";
 const UpdateProduct = () => {
   const product = useLoaderData();
   const { _id, name, type, description, price, rating, brandName, photo } =product;
+  console.log(product);
+
 
   const handleUpdateProduct = (e) => {
     e.preventDefault();
@@ -16,7 +18,7 @@ const UpdateProduct = () => {
     const description = form.description.value;
     const photo = form.photo.value;
     const updatedProduct = { name,type,description, price,rating, brandName,photo,};
-    // console.log(updatedProduct);
+    console.log(updatedProduct);
 
     //send data to the server
     fetch(`http://localhost:5000/fashion/${_id}`, {
@@ -73,7 +75,7 @@ const UpdateProduct = () => {
                 defaultValue={brandName}
               >
                 <option value="Nike">Nike</option>
-                <option value="Gucchi">Gucchi</option>
+                <option value="Gucci">Gucci</option>
                 <option value="zara">zara</option>
                 <option value="Adidas">Adidas</option>
                 <option value="H&M">H&M</option>
@@ -164,12 +166,6 @@ const UpdateProduct = () => {
               value="Update Product"
               className="btn btn-block border-2 bg-amber-600 text-white mt-5"
             />
-
-            {/* <div className="form-control">
-                <button className="py-3 px-2 bg-amber-500 text-white mt-3">
-                    Update Product
-                </button>
-             </div> */}
           </div>
         </form>
       </div>

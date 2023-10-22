@@ -9,7 +9,7 @@ const Details = () => {
   //console.log(product);
 
 
-  const handleAddToCart = (e) => {
+  const handleAddToCart = () => {
     fetch('http://localhost:5000/cart',{
       method: 'POST',
       headers: {

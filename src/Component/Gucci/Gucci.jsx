@@ -10,8 +10,8 @@ const Gucci = () => {
   const allBrandProduct = useLoaderData();
   const Gucci = allBrandProduct.filter(
     (product) => product.brandName.toLowerCase() === "Gucci".toLowerCase());
-  // console.log(allBrandProduct);
-  // console.log(Gucci);
+  console.log(allBrandProduct);
+  console.log(Gucci);
 
   return (
     <div>
@@ -106,10 +106,15 @@ const Gucci = () => {
         These collections focus on the latest fashion trends and feature items
         that are <br /> currently in vogue.there are some latest product .
       </p>
+      <div className={Gucci.length !== 0 && "block"}>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {Gucci.map((product) => (
           <GucciCard key={product._id} product={product}></GucciCard>
         ))}
+      </div>
+      </div>
+      <div className={Gucci.length== 0 ? 'block' : 'hidden'}>
+        <div className="text-3xl text-center ">  There is No data found</div>
       </div>
     </div>
   );

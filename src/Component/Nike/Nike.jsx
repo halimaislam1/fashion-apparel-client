@@ -129,10 +129,10 @@ const Nike = () => {
 
       </div>
       <div className={Nike.length== 0 ? 'block' : 'hidden'}>
-         There is No data found
+      <p className="text-3xl text-center  pb-8">  There is No data found</p>
       </div>
     </div>
-    // className={Nike.length !== 0 && "block"}
+    
   );
 };
 

@@ -80,7 +80,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/updateProduct/:id',
-        element: <UpdateProduct></UpdateProduct>,
+        element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
         loader :({params}) => fetch(`http://localhost:5000/fashion/${params.id}`)
 
       },
