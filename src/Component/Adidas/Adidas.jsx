@@ -7,15 +7,14 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import AdidasCard from "../AdidasCard/AdidasCard";
 
 
-
-
 const Adidas = () => {
+
     const allBrandProduct = useLoaderData();
     const Nike = allBrandProduct.filter(
       (product) => product.brandName.toLowerCase() === "Adidas".toLowerCase()
     );
-    console.log(allBrandProduct);
-    console.log(Nike);
+    // console.log(allBrandProduct);
+    // console.log(Nike);
 
     return (
         <div>

@@ -11,8 +11,8 @@ const HM = () => {
     const HM = allBrandProduct.filter(
       (product) => product.brandName.toLowerCase() === "H&M".toLowerCase()
     );
-    console.log(allBrandProduct);
-    console.log(HM);
+    // console.log(allBrandProduct);
+    // console.log(HM);
 
     return (
         <div>

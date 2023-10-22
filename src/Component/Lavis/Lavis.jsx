@@ -11,8 +11,8 @@ const Lavis = () => {
     const Levis= allBrandProduct.filter(
       (product) => product.brandName.toLowerCase() === "Levi's".toLowerCase()
     );
-    console.log(allBrandProduct);
-    console.log(Levis);
+    // console.log(allBrandProduct);
+    // console.log(Levis);
 
     return (
         <div>

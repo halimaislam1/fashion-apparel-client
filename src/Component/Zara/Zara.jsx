@@ -11,8 +11,8 @@ const Zara = () => {
     const Nike = allBrandProduct.filter(
       (product) => product.brandName.toLowerCase() === "Zara".toLowerCase()
     );
-    console.log(allBrandProduct);
-    console.log(Nike);
+    // console.log(allBrandProduct);
+    // console.log(Nike);
   
 
     return (

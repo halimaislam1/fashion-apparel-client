@@ -1,5 +1,4 @@
 import { useLoaderData } from "react-router-dom";
-import NikeCard from "../NikeCard/NikeCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -10,10 +9,9 @@ import GucciCard from "../GucciCard/GucciCard";
 const Gucci = () => {
   const allBrandProduct = useLoaderData();
   const Gucci = allBrandProduct.filter(
-    (product) => product.brandName.toLowerCase() === "Gucci".toLowerCase()
-  );
-  console.log(allBrandProduct);
-  console.log(Gucci);
+    (product) => product.brandName.toLowerCase() === "Gucci".toLowerCase());
+  // console.log(allBrandProduct);
+  // console.log(Gucci);
 
   return (
     <div>

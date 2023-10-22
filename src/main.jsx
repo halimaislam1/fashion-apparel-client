@@ -20,6 +20,10 @@ import Zara from './Component/Zara/Zara';
 import HM from './Component/H & M/HM';
 import Lavis from './Component/Lavis/Lavis';
 import Adidas from './Component/Adidas/adidas';
+import UpdateProduct from './Component/UpdateProduct/UpdateProduct';
+import Details from './Component/Details/Details';
+import Cart from './Component/Cart/Cart';
+
 
 
 const router = createBrowserRouter([
@@ -78,7 +82,24 @@ const router = createBrowserRouter([
         element: <Lavis></Lavis>,
         loader :() => fetch('http://localhost:5000/fashion')
 
+      },
+      {
+        path:'/updateProduct/:id',
+        element: <UpdateProduct></UpdateProduct>,
+        loader :({params}) => fetch(`http://localhost:5000/fashion/${params.id}`)
+
+      },
+      {
+        path: '/details/:id',
+        element:<PrivateRoute><Details></Details></PrivateRoute>,
+        loader: () => fetch('http://localhost:5000/fashion')
+      },
+      {
+        path: '/cart/:id',
+        element:<Cart></Cart>,
+        loader: () => fetch('http://localhost:5000/fashion')
       }
+      
       
     ]
   },
