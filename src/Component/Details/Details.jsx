@@ -1,12 +1,36 @@
-import React from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Details = () => {
   const allProduct = useLoaderData();
   //   console.log(allProduct);
   const { id } = useParams();
   const product = allProduct?.find((product) => product._id === id);
-  console.log(product);
+  //console.log(product);
+
+
+  const handleAddToCart = (e) => {
+    fetch('http://localhost:5000/cart',{
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(product)
+  })
+     .then(res => res.json())
+     .then(data => {
+        console.log(data);
+        if(data.acknowledged == true){
+          Swal.fire({
+              title: 'Success!',
+              text: 'Product added successfully',
+              icon: 'success',
+              confirmButtonText: 'Cool'
+            })
+      }
+     })
+  }
+    
 
   return (
     <div>
@@ -31,7 +55,7 @@ const Details = () => {
             <p className="py-6">
              {product.description}
             </p>
-            <button className="btn bg-amber-500 text-white">Add To Cart</button>
+          <button onClick={handleAddToCart} className="btn bg-amber-500 text-white">Add To Cart</button>
           </div>
         </div>
       </div>

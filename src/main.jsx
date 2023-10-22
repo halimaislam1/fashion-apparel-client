@@ -22,7 +22,6 @@ import Lavis from './Component/Lavis/Lavis';
 import Adidas from './Component/Adidas/adidas';
 import UpdateProduct from './Component/UpdateProduct/UpdateProduct';
 import Details from './Component/Details/Details';
-import Cart from './Component/Cart/Cart';
 
 
 
@@ -38,11 +37,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/addproduct',
-        element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
-      },
-      {
-        path: '/mycart',
-        element: <PrivateRoute><MyCart></MyCart></PrivateRoute>
+        element: <AddProduct></AddProduct>
       },
       {
         path: '/login',
@@ -95,10 +90,10 @@ const router = createBrowserRouter([
         loader: () => fetch('http://localhost:5000/fashion')
       },
       {
-        path: '/cart/:id',
-        element:<Cart></Cart>,
-        loader: () => fetch('http://localhost:5000/fashion')
-      }
+        path: '/myCart',
+        element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
+        loader: () => fetch('http://localhost:5000/cart')  
+      },
       
       
     ]
