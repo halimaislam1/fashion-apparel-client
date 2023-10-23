@@ -42,16 +42,16 @@ const HM = () => {
             <div className=""></div>
             <div className=" ml-32 md:ml-96 pl-28">
               <div className="max-w-md ">
-                <h1 className="mb-2 text-xl md:text-5xl font-bold   ">
+                <h1 className="mb-2 text-xl md:text-5xl font-bold  text-gray-800 ">
                   Autumn Collection
                 </h1>
-                <p className="mb-5  text-sm md:text-md">
+                <p className="mb-5  text-sm md:text-md text-gray-800">
                   Discover the Autumn Collection fashion trends.comes in a wide
                   range of sizes to accommodate children of different ages and
                   growth stages. Proper fit is essential to ensure comfort and
                   ease of movement.
                 </p>
-                <button className="btn text-xl bg-amber-400 text-white">
+                <button className="btn text-xl bg-amber-400 text-white border-none">
                   60%OFF
                 </button>
               </div>
@@ -67,16 +67,16 @@ const HM = () => {
             <div className=""></div>
             <div className=" mr-0 md:mr-96  md:pr-32">
               <div className="max-w-md ">
-                <h1 className="mb-5 text-2xl md:text-5xl font-bold  mt-16 md:mt-0">
+                <h1 className="mb-5 text-2xl md:text-5xl font-bold  mt-16 md:mt-0 text-gray-800">
                   Fashionable Collection
                 </h1>
-                <p className="mb-5  text-sm md:text-md">
+                <p className="mb-5  text-sm md:text-md text-gray-700">
                   Discover the Collection fashion trends.comes in a wide range
                   of sizes to accommodate children of different ages and growth
                   stages. Proper fit is essential to ensure comfort and ease of
                   movement.
                 </p>
-                <button className="btn text-xl bg-amber-400 text-white">
+                <button className="btn text-xl bg-amber-400 text-white border-none">
                   20%OFF
                 </button>
               </div>
@@ -92,16 +92,16 @@ const HM = () => {
             <div className=""></div>
             <div className=" ml-48 md:ml-96 md:pl-32">
               <div className="max-w-md ">
-                <h1 className="mb-2 text-xl md:text-5xl font-bold   ">
+                <h1 className="mb-2 text-xl md:text-5xl font-bold  ">
                   Latest Collection
                 </h1>
-                <p className="mb-5  text-sm md:text-md">
+                <p className="mb-5  text-sm md:text-md ">
                   Discover the latest Collection fashion trends.comes in a wide
                   range of sizes to accommodate children of different ages and
                   growth stages. Proper fit is essential to ensure comfort and
                   ease of movement.
                 </p>
-                <button className="btn text-xl bg-amber-500 text-white">
+                <button className="btn text-xl bg-amber-500 text-white border-none">
                   40%OFF
                 </button>
               </div>

@@ -1,10 +1,16 @@
-import { useState } from "react";
+import {  useContext, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import { AuthContext } from "../Provider/AuthProvider";
+
 
 const MyCart = () => {
   const loadedCart = useLoaderData();
   const [productCart, setProductCart] = useState(loadedCart);
+  console.log(productCart);
+  const {user} = useContext(AuthContext);
+  const userEmail = user.email
+  const userProducts = productCart.filter(products => products.userEmail === userEmail)
 
   const handleDelete =(_id) =>{
     //  console.log(_id);
@@ -25,16 +31,18 @@ const MyCart = () => {
           .then(res => res.json())
           .then(data =>  {
             console.log(data);
-            if(data.deletedCount > 0){
+       
+              if(data.deletedCount > 0){
                 Swal.fire(
                     'Deleted!',
                     'Your product has been deleted.',
                     'success'
                   ) 
                 //   window.location.reload()
-                  const remaining = productCart.filter(cart => cart._id !== _id)
+                  const remaining = userProducts.filter(cart => cart._id !== _id)
                   setProductCart(remaining)
-            }
+               }
+            
           })
         }
 
@@ -44,7 +52,7 @@ const MyCart = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 px-32 py-14">
       {
-      productCart?.map((cart) => (
+      userProducts?.map((cart) => (
         <div
           key={cart._id}
           className="card card-side w- bg-base-100  border p-1"

@@ -37,11 +37,11 @@ const Gucci = () => {
           >
             <div className=" ml-0  md:ml-96 md:pl-28">
               <div className="max-w-md ">
-                <h1 className="mb-5 text-2xl md:text-5xl font-bold  mt-2 md:mt-0">Women Collection</h1>
-                <p className="mb-5  text-sm md:text-md">
+                <h1 className="mb-5 text-2xl md:text-5xl font-bold text-gray-800  mt-2 md:mt-0">Women Collection</h1>
+                <p className="mb-5  text-sm md:text-md text-gray-700">
                 Discover the Women Collection fashion trends.comes in a wide range of sizes to accommodate women of different ages and growth stages. Proper fit is essential to ensure comfort and ease of movement.
                 </p>
-                <button className="btn text-xl bg-amber-500 text-white">25%OFF</button>
+                <button className="btn text-xl bg-amber-500 text-white border-none">25%OFF</button>
               </div>
             </div>
           </div>
@@ -58,15 +58,15 @@ const Gucci = () => {
             <div className=""></div>
             <div className="ml-52 md:ml-96 pl-0 lg:pl-72">
               <div className="max-w-md ">
-                <h1 className="mb-5 text-2xl md:text-5xl font-bold">
-                  New Arrival
+                <h1 className="mb-5 text-2xl md:text-5xl font-bold text-gray-800">
+                  New Arrival 
                 </h1>
-                <p className="mb-5 text-sm md:text-md">
+                <p className="mb-5 text-sm md:text-md text-gray-700">
                   Discover the new arrival fashion trends. The choice of
                   materials and fabrics is crucial in dress collections.
                   Designers select fabrics that suit the season and occasion.
                 </p>
-                <button className="btn text-xl bg-pink-300 text-white">
+                <button className="btn text-xl bg-pink-300 text-white border-none">
                   15%OFF
                 </button>
               </div>
@@ -83,13 +83,13 @@ const Gucci = () => {
           >
             <div className="">
               <div className="max-w-md ml-24 lg:ml-0 md:ml-36">
-                <h1 className="mb-5 text-2xl lg:text-5xl font-bold">
+                <h1 className="mb-5 text-2xl lg:text-5xl font-bold text-gray-800">
                   Latest Arrival
                 </h1>
-                <p className="mb-5 text-sm md:text-md">
+                <p className="mb-5 text-sm md:text-md text-gray-700">
                   Discover the hottest latest summer fashion trends. Designed to accommodate a growing belly, maternity dresses provide comfort and style for expectant mothers..
                 </p>
-                <button className="btn md:text-xl bg-amber-500 text-white">
+                <button className="btn md:text-xl bg-amber-500 text-white border-none">
                   40%OFF
                 </button>
               </div>

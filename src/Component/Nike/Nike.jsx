@@ -40,10 +40,10 @@ const Nike = () => {
           >
             <div className="ml-28  md:ml-96 pl-0 lg:pl-72  ">
               <div className="max-w-md ">
-                <h1 className="mb-5 text-2xl md:text-5xl font-bold">
+                <h1 className="mb-5 text-2xl md:text-5xl font-bold text-gray-800">
                   Summer Sale
                 </h1>
-                <p className="mb-5 text-sm md:text-md">
+                <p className="mb-5 text-sm md:text-md text-gray-700">
                   Discover the hottest summer fashion trends. From breezy
                   sundresses to stylish swimwear, you will be the trendsetter at
                   every beach and pool party.
@@ -67,10 +67,10 @@ const Nike = () => {
             <div className=""></div>
             <div className="ml-52 md:ml-96 pl-0 lg:pl-72">
               <div className="max-w-md ">
-                <h1 className="mb-5 text-2xl md:text-5xl font-bold">
+                <h1 className="mb-5 text-2xl md:text-5xl font-bold text-gray-800">
                   New Arrival
                 </h1>
-                <p className="mb-5 text-sm md:text-md">
+                <p className="mb-5 text-sm md:text-md text-gray-700">
                   Discover the new arrival fashion trends. The choice of
                   materials and fabrics is crucial in dress collections.
                   Designers select fabrics that suit the season and occasion.
@@ -91,10 +91,10 @@ const Nike = () => {
             <div className=""></div>
             <div className=" mr-0 md:mr-96">
               <div className="max-w-md ">
-                <h1 className="mb-5 text-2xl md:text-5xl font-bold  mt-16 md:mt-0">
+                <h1 className="mb-5 text-2xl md:text-5xl font-bold  mt-16 md:mt-0 text-gray-800">
                   Kids Collection
                 </h1>
-                <p className="mb-5  text-sm md:text-md">
+                <p className="mb-5  text-sm md:text-md text-gray-700">
                   Discover the kids Collection fashion trends.comes in a wide
                   range of sizes to accommodate children of different ages and
                   growth stages. Proper fit is essential to ensure comfort and

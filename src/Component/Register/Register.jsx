@@ -31,7 +31,6 @@ const Register = () => {
 
     createUser(email, password)
       .then((result) => {
-        console.log(result.user);
         swal.fire("Registration successful.please login!!!");
 
         updateProfile(result.user, {
@@ -40,6 +39,7 @@ const Register = () => {
         })
           .then(() => {
             navigate(location?.state ? location.state : "/");
+            window.location.reload();
           })
           .catch(() => {});
         //  window.location.reload();

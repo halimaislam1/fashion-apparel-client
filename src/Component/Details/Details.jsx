@@ -1,21 +1,29 @@
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { useContext } from "react"; 
+import {  useLoaderData, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
+import { AuthContext } from "../Provider/AuthProvider"; 
 
 const Details = () => {
   const allProduct = useLoaderData();
-  //   console.log(allProduct);
   const { id } = useParams();
   const product = allProduct?.find((product) => product._id === id);
-  //console.log(product);
-
+  const {user} = useContext(AuthContext) 
+  console.log(user);
 
   const handleAddToCart = () => {
+    const userEmail = user.email  
+    const userProduct = {
+      ...product, userEmail
+    }
+
     fetch('http://localhost:5000/cart',{
       method: 'POST',
       headers: {
           'Content-Type': 'application/json'
       },
-      body: JSON.stringify(product)
+      body: JSON.stringify(
+        userProduct
+      )
   })
      .then(res => res.json())
      .then(data => {

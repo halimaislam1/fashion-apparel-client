@@ -27,7 +27,7 @@ const Adidas = () => {
           clickable: true,
         }}
         navigation={true}
-        modules={[Pagination, Navigation]}
+        modules={[Autoplay,Pagination, Navigation]}
         className="mySwiper"
       >
         <SwiperSlide>
@@ -38,15 +38,15 @@ const Adidas = () => {
           >
             <div className="ml-52 md:ml-96 pl-0 lg:pl-72 ">
               <div className="max-w-md ">
-                <h1 className="mb-5 text-2xl md:text-5xl font-bold">
+                <h1 className="mb-5 text-2xl md:text-5xl font-bold text-gray-800">
                   Women New Arrival
                 </h1>
-                <p className="mb-5 text-sm md:text-md">
+                <p className="mb-5 text-sm md:text-md text-gray-700">
                   Discover the women new arrival fashion trends. The choice of
                   materials and fabrics is crucial in dress collections.
                   Designers select fabrics that suit the season and occasion.
                 </p>
-                <button className="btn text-xl bg-amber-500 text-white">
+                <button className="btn text-xl bg-amber-500 text-white border-none">
                   30%OFF
                 </button>
               </div>
@@ -75,7 +75,7 @@ const Adidas = () => {
                   sundresses to stylish swimwear, you will be the trendsetter at
                   every beach and pool party.
                 </p>
-                <button className="btn md:text-xl  bg-amber-500 text-white ">
+                <button className="btn md:text-xl  bg-amber-500 text-white border-none">
                   30%OFF
                 </button>
               </div>
@@ -94,16 +94,16 @@ const Adidas = () => {
             <div className=""></div>
             <div className=" ml-48 md:ml-96">
               <div className="max-w-md ">
-                <h1 className="mb-2 text-xl md:text-5xl font-bold   ">
+                <h1 className="mb-2 text-xl md:text-5xl font-bold  text-gray-800 ">
                   Kids Collection
                 </h1>
-                <p className="mb-5  text-sm text-slate-500 md:text-md">
+                <p className="mb-5  text-sm text-slate-700 md:text-md">
                   Discover the kids Collection fashion trends.comes in a wide
                   range of sizes to accommodate children of different ages and
                   growth stages. Proper fit is essential to ensure comfort and
                   ease of movement.
                 </p>
-                <button className="btn text-xl bg-red-400 text-white">
+                <button className="btn text-xl bg-red-400 text-white border-none">
                   10%OFF
                 </button>
               </div>
