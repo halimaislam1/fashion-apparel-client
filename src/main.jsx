@@ -37,7 +37,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/addproduct',
-        element: <AddProduct></AddProduct>
+        element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
       },
       {
         path: '/login',
@@ -50,49 +50,49 @@ const router = createBrowserRouter([
       {
         path: '/nike',
         element: <Nike></Nike>,
-         loader :() => fetch('http://localhost:5000/fashion')
+         loader :() => fetch('https://fashion-apparel-server-bice.vercel.app/fashion')
       },
       {
         path: '/gucci',
         element: <Gucci></Gucci>,
-         loader :() => fetch('http://localhost:5000/fashion')
+         loader :() => fetch('https://fashion-apparel-server-bice.vercel.app/fashion')
       },
       {
         path: '/zara',
         element: <Zara></Zara>,
-         loader :() => fetch('http://localhost:5000/fashion')
+         loader :() => fetch('https://fashion-apparel-server-bice.vercel.app/fashion')
       },
       {
         path:'/adidas',
         element: <Adidas></Adidas>,
-        loader :() => fetch('http://localhost:5000/fashion')
+        loader :() => fetch('https://fashion-apparel-server-bice.vercel.app/fashion')
       },
       {
         path: '/h&m',
         element: <HM></HM>,
-        loader :() => fetch('http://localhost:5000/fashion')
+        loader :() => fetch('https://fashion-apparel-server-bice.vercel.app/fashion')
       },
       {
         path:'/levis',
         element: <Lavis></Lavis>,
-        loader :() => fetch('http://localhost:5000/fashion')
+        loader :() => fetch('https://fashion-apparel-server-bice.vercel.app/fashion')
 
       },
       {
         path:'/updateProduct/:id',
         element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
-        loader :({params}) => fetch(`http://localhost:5000/fashion/${params.id}`)
+        loader :({params}) => fetch(`https://fashion-apparel-server-bice.vercel.app/fashion/${params.id}`)
 
       },
       {
         path: '/details/:id',
         element:<PrivateRoute><Details></Details></PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/fashion')
+        loader: () => fetch('https://fashion-apparel-server-bice.vercel.app/fashion')
       },
       {
         path: '/myCart',
         element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/cart')  
+        loader: () => fetch('https://fashion-apparel-server-bice.vercel.app/cart')  
       },
       
       

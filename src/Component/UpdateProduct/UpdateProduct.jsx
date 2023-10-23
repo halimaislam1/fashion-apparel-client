@@ -21,7 +21,7 @@ const UpdateProduct = () => {
     console.log(updatedProduct);
 
     //send data to the server
-    fetch(`http://localhost:5000/fashion/${_id}`, {
+    fetch(`https://fashion-apparel-server-bice.vercel.app/fashion/${_id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -45,7 +45,7 @@ const UpdateProduct = () => {
   return (
     <div className="max-w-5xl mx-auto mt-20">
       <div className="bg-[#F4F3F0] p-14 mb-20">
-        <h2 className="text-center mb-5 text-3xl  font-bold font-serif">
+        <h2 className="text-center mb-5 text-3xl text-gray-700 font-bold font-serif">
           Update Your Product
         </h2>
         <form onSubmit={handleUpdateProduct}>
@@ -109,7 +109,7 @@ const UpdateProduct = () => {
                   type="text"
                   name="price"
                   defaultValue={price}
-                  className="input input-bordered w-full"
+                  className="input input-bordered w-full "
                 />
               </label>
             </div>
@@ -164,7 +164,7 @@ const UpdateProduct = () => {
             <input
               type="submit"
               value="Update Product"
-              className="btn btn-block border-2 bg-amber-600 text-white mt-5"
+              className="btn btn-block border-2 bg-amber-600 text-white mt-5 border-none"
             />
           </div>
         </form>

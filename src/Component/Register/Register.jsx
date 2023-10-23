@@ -67,7 +67,7 @@ const Register = () => {
               <form onSubmit={handleRegister}>
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text ">Name</span>
+                    <span className="label-text text-gray-800">Name</span>
                   </label>
                   <input
                     type="text"
@@ -79,8 +79,8 @@ const Register = () => {
                   />
                 </div>
                 <div className="form-control">
-                  <label className="label">
-                    <span className="label-text ">Photo Url</span>
+                  <label className="label ">
+                    <span className="label-text text-gray-800">Photo Url</span>
                   </label>
                   <input
                     type="text"
@@ -92,7 +92,7 @@ const Register = () => {
                 </div>
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text ">Email</span>
+                    <span className="label-text text-gray-800">Email</span>
                   </label>
                   <input
                     type="email"
@@ -104,7 +104,7 @@ const Register = () => {
                 </div>
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text ">Password</span>
+                    <span className="label-text text-gray-800">Password</span>
                   </label>
                   <input
                     type="password"
@@ -114,7 +114,7 @@ const Register = () => {
                     required
                   />
                   <label className="label">
-                    <a href="#" className="label-text-alt link link-hover">
+                    <a href="#" className="label-text-alt link link-hover text-gray-800">
                       Forgot password?
                     </a>
                   </label>
@@ -122,14 +122,14 @@ const Register = () => {
                 <div className="form-control mt-3">
                   <button
                     className="btn text-white bg-black font-semibold 
-                              hover:bg-slate-500"
+                              hover:bg-slate-500 "
                   >
                     Register
                   </button>
                 </div>
               </form>
 
-              <p className="text-center mt-2">
+              <p className="text-center mt-2 text-gray-800">
                 Already have an account?{" "}
                 <Link className="text-amber-600 font-bold" to="/login">
                   Login

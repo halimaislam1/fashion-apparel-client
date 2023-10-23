@@ -19,7 +19,6 @@ const Login = () => {
     console.log(email, password);
 
     if (password.length < 6) {
-    //   swal("Password should be at least 6 charecters");
       Swal.fire({
         title: 'Success!',
         text: 'Password should be at least 6 charecters',
@@ -79,7 +78,7 @@ const Login = () => {
       <div className=" ">
         <div className="hero-content flex-col ">
           <div className="text-center ">
-            <h1 className="text-5xl  font-bold mb-2">
+            <h1 className="text-5xl  font-bold mb-2 ">
               Please Login!
             </h1>
           </div>
@@ -88,7 +87,7 @@ const Login = () => {
               <form onSubmit={handleLogin}>
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text ">Email</span>
+                    <span className="label-text text-gray-700">Email</span>
                   </label>
                   <input
                     type="email"
@@ -100,8 +99,8 @@ const Login = () => {
                   />
                 </div>
                 <div className="form-control">
-                  <label className="label">
-                    <span className="label-text ">Password</span>
+                  <label className="label ">
+                    <span className="label-text text-gray-700">Password</span>
                   </label>
                   <input
                     type="password"
@@ -111,7 +110,7 @@ const Login = () => {
                     required
                   />
                   <label className="label">
-                    <a href="#" className="label-text-alt link link-hover">
+                    <a href="#" className="label-text-alt link link-hover text-gray-700">
                       Forgot password?
                     </a>
                   </label>
@@ -125,7 +124,7 @@ const Login = () => {
                   </button>
                 </div>
               </form>
-              <p className="text-center mt-2">
+              <p className="text-center mt-2 text-gray-800">
                 Do not have an account?{" "}
                 <Link className="text-amber-600 font-bold" to="/register">
                   Register
@@ -137,7 +136,7 @@ const Login = () => {
       </div>
       <button
         onClick={handleGoogleSignIn}
-        className="flex items-center btn-outline p-4 bg-slate-300 mx-auto "
+        className="flex items-center btn-outline p-4 text-gray-700 bg-slate-300 mx-auto "
       >
         <FcGoogle></FcGoogle>Login with google
       </button>

@@ -24,7 +24,7 @@ const AddProduct = () => {
     console.log(newProduct);
 
     //send data to the server
-    fetch('http://localhost:5000/fashion',{
+    fetch('https://fashion-apparel-server-bice.vercel.app/fashion',{
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -49,15 +49,15 @@ const AddProduct = () => {
   return (
     <div className="max-w-5xl mx-auto mt-20">
       <div className="bg-[#F4F3F0] p-14 mb-20">
-        <h2 className="text-center mb-5 text-3xl  font-bold font-serif">
+        <h2 className="text-center mb-5 text-3xl text-gray-700 font-bold  font-serif">
           Add Your Product
         </h2>
         <form onSubmit={handleAddProduct}>
           {/* Name */}
           <div className="md:flex justify-center gap-5">
             <div className="form-control md:w-1/2">
-              <label className="label">
-                <span className="label-text"> Name</span>
+              <label className="label ">
+                <span className="label-text text-gray-800"> Name</span>
               </label>
               <label className="input-group">
                 <input
@@ -71,9 +71,9 @@ const AddProduct = () => {
             {/*Brand Name*/}
             <div className="form-control md:w-1/2">
               <label className="label">
-                <span className="label-text">Brand Name</span>
+                <span className="label-text text-gray-800">Brand Name</span>
               </label>
-              <select className="select select-bordered " name='brandName'>
+              <select className="select select-bordered text-gray-800" name='brandName'>
                       <option value="Nike">Nike</option>
                       <option value="Gucci">Gucci</option>
                       <option value="zara">zara</option>
@@ -87,9 +87,9 @@ const AddProduct = () => {
           <div className="md:flex justify-center gap-5">
             <div className="form-control md:w-1/2">
               <label className="label">
-                <span className="label-text">Type</span>
+                <span className="label-text text-gray-800 ">Type</span>
               </label>
-                  <select className="select select-bordered " name='type'>
+                  <select className="select select-bordered text-gray-800" name='type'>
                       <option value="Women">Women collection</option>
                       <option value="Man">Man collection</option>
                       <option value="Baby">Baby collection</option>
@@ -98,7 +98,7 @@ const AddProduct = () => {
             {/* Price */}
             <div className="form-control md:w-1/2">
               <label className="label">
-                <span className="label-text">Price</span>
+                <span className="label-text text-gray-800">Price</span>
               </label>
               <label className="input-group">
                 <input
@@ -115,7 +115,7 @@ const AddProduct = () => {
              {/* Short Description*/}
             <div className="form-control md:w-1/2">
               <label className="label">
-                <span className="label-text">Short Description</span>
+                <span className="label-text text-gray-800">Short Description</span>
               </label>
               <label className="input-group">
                 <input
@@ -129,7 +129,7 @@ const AddProduct = () => {
             {/* Rating */}
             <div className="form-control md:w-1/2">
               <label className="label">
-                <span className="label-text">Rating</span>
+                <span className="label-text text-gray-800">Rating</span>
               </label>
               <label className="input-group">
                 <input
@@ -145,7 +145,7 @@ const AddProduct = () => {
           <div className=" justify-center gap-5">
             <div className="form-control  w-1/2">
               <label className="label">
-                <span className="label-text">Photo URL</span>
+                <span className="label-text text-gray-800">Photo URL</span>
               </label>
               <label className="input-group">
                 <input
@@ -160,7 +160,7 @@ const AddProduct = () => {
             <input
               type="submit"
               value="Add Product"
-              className="btn btn-block border-2 bg-amber-600 text-white mt-5"
+              className="btn btn-block border-none  bg-amber-600 text-white mt-5"
             />
           </div>
         </form>

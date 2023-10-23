@@ -16,7 +16,7 @@ const Details = () => {
       ...product, userEmail
     }
 
-    fetch('http://localhost:5000/cart',{
+    fetch('https://fashion-apparel-server-bice.vercel.app/cart',{
       method: 'POST',
       headers: {
           'Content-Type': 'application/json'
